@@ -1,0 +1,38 @@
+.competition_reward {
+    flex: 1 1 260px;
+    background: linear-gradient(110deg, #faffea 80%, #f7fcd6 100%);
+    border-radius: 11px;
+    border: 1.2px solid #e8efa6;
+    box-shadow: 0 2px 8px rgba(190, 200, 90, .07);
+    padding: 15px 18px 12px 18px;
+    margin-bottom: 8px;
+}
+
+.paper_exp {
+    background: #fff;
+    border-radius: 13px;
+    border: 1px solid #dadff7;
+    box-shadow: 0 2px 6px rgba(136, 160, 255, 0.07);
+    margin-bottom: 22px;
+    padding: 24px 30px 18px 30px;
+}
+
+.project_exp {
+    position: absolute;
+    left: -38px;
+    top: 10px;
+    width: 23px;
+    height: 23px;
+    background: linear-gradient(120deg, #7289ff, #e2faff);
+    border-radius: 50%;
+    border: 2.5px solid #b2bfff;
+    box-shadow: 0 2px 6px rgba(100, 130, 255, 0.09);
+}
+
+.project_container {
+    background: #fff;
+    border-radius: 13px;
+    border: 1.5px solid #d7e2fa;
+    box-shadow: 0 2px 12px rgba(100, 130, 255, 0.09);
+    padding: 22px 30px 16px 30px;
+}
