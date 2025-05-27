@@ -158,7 +158,7 @@
                 <div class="project_exp"></div>
                 <div class="project_container">
                     <div style="display:flex; align-items:center; margin-bottom:8px;">
-                        <span style="font-size:1.17em; font-weight:600; color:#ff8d27;">恒定乘积做市商模型去中心化交易所</span>
+                        <span style="font-size:1.17em; font-weight:600; color:#ff8d27;">基于恒定乘积做市商模型的去中心化交易所</span>
                         <span style="margin-left:auto; font-size:0.97em; color:#9ea9c7;">2025/05 - 2025/07</span>
                     </div>
                     <div style="font-size:1.01em; margin-bottom:4px; color:#777;">
@@ -170,11 +170,20 @@
                             基于 BrokerFi 开发去中心化交易所（DEX），实现恒定乘积做市商（AMM）模型的多代币自动兑换功能，并重构后端接口，支持用户交互与多代币交易。
                         </span>
                     </div>
+                     <div style="margin-bottom:7px;">
+                        <b style="color:#ff8d27;">项目亮点：</b>
+                        <ul style="margin: 7px 0 0 20px; color: #666; font-size:0.99em; line-height:1.7;">
+                            <li>节点之间的通信使用TCP来进行，为了节约内存占用，每个节点并不使用GIN框架，而是开启一个TCP Listener</li>
+                            <li>因为同一分片的节点之间需要频繁通信，因此节点发送完消息TCP不会关闭，会在整个项目运行期间保持，同时引入随机阻塞时间模拟节点通信之间的延迟</li>
+                            <li>每个节点会维护一个TCP表，当节点要和别的节点进行通信时将会先查找是否在这张表中，如果不在则新建立连接，否则可以使用之前的TCP连接</li>
+                            <li>用一个supervisor节点开启GIN后端，监听其他节点的消息，用户可以通过supervisor节点获取其他节点的信息</li>
+                        </ul>
+                    </div>
                     <div style="margin-bottom:5px;">
                         <b style="color:#ff8d27;">个人贡献：</b>
                         <ul style="margin: 7px 0 0 20px; color: #555; font-size:0.99em; line-height:1.7;">
                             <li>实现AMM机制，支持多种代币间自动化兑换。</li>
-                            <li>扩展Broker2Earn和BrokerFi模型，支持多代币交易。</li>
+                            <li>扩展原本的 BrokerFi 模型，支持多代币交易。</li>
                             <li>重构后端接口，用户可查询资金、成为/退出broker、发起交易和兑换。</li>
                         </ul>
                     </div>
